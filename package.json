@@ -1,0 +1,62 @@
+{
+  "name": "react-async-actions",
+  "version": "1.0.0",
+  "description": "A react library for making redux actions asynchronous",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jest.config.json",
+    "lint": "eslint --fix --ext .ts,.js src",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahaaabello/react-async-actions.git"
+  },
+  "keywords": [
+    "redux",
+    "redux-actions",
+    "async"
+  ],
+  "author": "Wahab Bello",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.6.1",
+    "@types/redux-saga": "^0.10.5",
+    "@types/redux-thunk": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-saga": "^1.1.3",
+    "redux-thunk": "^2.3.0"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
