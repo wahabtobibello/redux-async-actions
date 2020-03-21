@@ -1,7 +1,7 @@
 {
-  "name": "react-async-actions",
+  "name": "@wahaaabello/redux-async-actions",
   "version": "1.0.0",
-  "description": "A react library for making redux actions asynchronous",
+  "description": "A redux library for making redux actions asynchronous",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wahaaabello/react-async-actions.git"
+    "url": "git+https://github.com/wahaaabello/redux-async-actions.git"
   },
   "keywords": [
     "redux",
@@ -58,5 +58,15 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*": "yarn lint"
+  },
+  "bugs": {
+    "url": "https://github.com/wahaaabello/redux-async-actions/issues"
+  },
+  "homepage": "https://github.com/wahaaabello/redux-async-actions#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
