@@ -27,7 +27,7 @@ export const errorReducer = (state = {}, action: Action<{}>) => {
   };
 };
 
-export const createLoadingSelector = (requestNames: any[]) => (state: any) =>
+export const createLoadingSelector = (requestNames: string[]) => (state: any) =>
   _(requestNames)
     .castArray()
     .some(type =>
@@ -37,7 +37,7 @@ export const createLoadingSelector = (requestNames: any[]) => (state: any) =>
       )
     );
 
-export const createErrorSelector = (requestNames: any[]) => (state: any) =>
+export const createErrorSelector = (requestNames: string[]) => (state: any) =>
   _(requestNames)
     .castArray()
     .map(type =>
@@ -49,7 +49,7 @@ export const createErrorSelector = (requestNames: any[]) => (state: any) =>
     .compact()
     .first() || null;
 
-export const createAsyncSelector = (requestNames: any[]) => {
+export const createAsyncSelector = (requestNames: string[]) => {
   const getLoading = createLoadingSelector(requestNames);
   const getError = createErrorSelector(requestNames);
 
