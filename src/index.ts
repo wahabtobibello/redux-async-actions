@@ -83,3 +83,5 @@ export const createAsyncSaga = (
       }
     }
   };
+
+export * from './reducer';
